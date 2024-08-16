@@ -18,7 +18,7 @@ module tt_um_SUMADOR1BIT (
 
   wire sl,c1,s2;
 
-    C_XOR U1 (.OUT(Sl), .A(ui_in[0]), .B(ui_in[1]));
+    C_XOR U1 (.OUT(sl), .A(ui_in[0]), .B(ui_in[1]));
     C_AND U2 (.OUT(cl), .A(ui_in[0]),  .B(ui_in[1]));
     C_XOR U3 (.OUT(uo_out[0]), .A(sl), .B(ui_in[2]));  
     C_AND U4 (.OUT(s2), .A(sl), .B(ui_in[2]));
