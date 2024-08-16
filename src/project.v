@@ -22,13 +22,13 @@ module tt_um_SUMADOR1BIT (
     C_AND U2 (.OUT(cl), .A(ui_in[0]),  .B(ui_in[1]));
     C_XOR U3 (.OUT(uo_out[0]), .A(sl), .B(ui_in[2]));  
     C_AND U4 (.OUT(s2), .A(sl), .B(ui_in[2]));
-    C_XOR U5 (.OUT(uo_out[1]), .A(s2), .B(cl));
+    C_XOR U5 (.OUT(uo_out[1]), .A(s2), .B(c1));
 
               assign uo_out  [7:2]=6'b0;
               assign uio_out [7:0]=8'b0;
               assign uio_oe  [7:0]=8'b0;
 
-              wire_unused=&{ena,clk,rst_n,ui_in[7:3],uio_in[7:0],1'b0};
+        wire _unused = &{ ena,clk,rst_n,ui_in[7:3],uio_in[7:0],1'b0};
               endmodule
 endmodule
  
